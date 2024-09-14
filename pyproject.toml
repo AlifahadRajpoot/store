@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["AlifahadRajpoot <Ranaalifahad.fsd.275@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.113.0"
+uvicorn = {extras = ["standards"], version = "^0.30.6"}
+sqlmodel = "^0.0.22"
+psycopg2 = "^2.9.9"
+python-dotenv = "^1.0.1"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.9"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+stripe = "^10.10.0"
+
+[tool.poetry.scripts]
+dev="backend.main:start"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
